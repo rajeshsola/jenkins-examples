@@ -1,4 +1,0 @@
-[submodule "gnu-hello"]
-	path = gnu-hello
-	url = https://github.com/rajeshsola/gnu-hello
-	branch = master
