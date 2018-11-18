@@ -3,6 +3,7 @@
 
 #include "account.h"
 #include <vector>
+#include <algorithm>
 #include <string>
 class Banking {
   std::vector<Account> accounts;
