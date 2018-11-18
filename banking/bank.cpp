@@ -11,29 +11,32 @@ void Banking::updateAccount(int id, std::string name) {
 }
 void Banking::deleteAccount() {}
 void Banking::displayAll() const {
-  for (auto &a1 : accounts) {
+  for (const auto &a1 : accounts) {
     a1.display();
   }
 }
 void Banking::displayOne(int id) const {
-  for (auto &ref : accounts) {
+  for (const auto &ref : accounts) {
     if (ref.getId() == id)
       ref.display();
   }
-  double Banking::findMax() const {
-    return std::max_element(
-        accounts.begin(), accounts.end(),
-        [](auto &r1, auto &r2) { return r1.getBalance() < r2.getBalance(); });
-  }
-  double Banking::findMin() const {
-    return std::max_element(
-        accounts.begin(), accounts.end(),
-        [](auto &r1, auto &r2) { return r1.getBalance() < r2.getBalance(); });
-  }
-  double Banking::findAverage() const {
-    double sum = 0;
-  std::for_each(accounts.begin(),accounts.end(),[](auto& ref) {
-      sum += ref.getBalance();
-  }
+}
+double Banking::findMax() {
+  auto res=std::max_element(
+      accounts.begin(), accounts.end(),
+      [](auto &r1,auto &r2) { return r1.getBalance() < r2.getBalance(); });
+  return res->getBalance();
+}
+double Banking::findMin() {
+  auto res=std::max_element(
+      accounts.begin(), accounts.end(),
+      [](auto &r1, auto &r2) { return r1.getBalance() < r2.getBalance(); });
+  return res->getBalance();
+}
+double Banking::findAverage()  {
+  double sum = 0;
+  std::for_each(accounts.begin(),accounts.end(),[&sum](auto& ref) {
+    sum += ref.getBalance();
+  });
   return sum/accounts.size();
-  }
+}

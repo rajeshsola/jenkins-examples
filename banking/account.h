@@ -14,7 +14,7 @@ public:
   ~Account();
   void credit(double);
   void debit(double);
-  double balanceEnquiry() // treated inline
+  double getBalance() // treated inline
   {
     return balance;
   }

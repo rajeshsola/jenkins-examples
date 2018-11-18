@@ -14,9 +14,9 @@ public:
   void deleteAccount();
   void displayAll() const;
   void displayOne(int) const;
-  double findMax() const;
-  double findMin() const;
-  double findAverage() const;
+  double findMax();
+  double findMin();
+  double findAverage();
 };
 
 #endif
