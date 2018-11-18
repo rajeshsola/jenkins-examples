@@ -18,6 +18,9 @@ public:
   {
     return balance;
   }
+  void display() const { }
+  int getId() const { return accountId; }
+  void updateName(std::string name) { accName=name; }
 };
 
 #endif

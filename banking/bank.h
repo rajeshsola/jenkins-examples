@@ -1,3 +1,6 @@
+#ifndef __BANKING_H
+#define __BANKING_H
+
 #include "account.h"
 #include <vector>
 #include <string>
@@ -6,11 +9,13 @@ class Banking {
 
 public:
   void addAccount(int, std::string, double);
-  void updateAccount();
+  void updateAccount(int,std::string);
   void deleteAccount();
   void displayAll() const;
   void displayOne(int) const;
-  void findMax() const;
-  void findMin() const;
-  void findAverage() const;
+  double findMax() const;
+  double findMin() const;
+  double findAverage() const;
 };
+
+#endif
