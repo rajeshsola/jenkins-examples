@@ -17,8 +17,8 @@ namespace {   //anonymous namespace
   }
   TEST(AccountTest, BalanceCheck) {
     Account a1(1001,"abcd",5000);
-    EXPECT_EQ(6000, a1.getBalance());
-    EXPECT_EQ(1002, a1.getId());    
+    EXPECT_EQ(5000, a1.getBalance());
+    EXPECT_EQ(1001, a1.getId());    
   }
 }
 int main(int argc,char* argv[]) {
