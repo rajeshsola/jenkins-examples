@@ -16,7 +16,7 @@ namespace {   //anonymous namespace
     EXPECT_EQ(1001, a1.getId());    
   }
   TEST(AccountTest, BalanceCheck) {
-    Account a2(1001,"abcd",5000);
+    Account a1(1001,"abcd",5000);
     EXPECT_EQ(6000, a1.getBalance());
     EXPECT_EQ(1002, a1.getId());    
   }
